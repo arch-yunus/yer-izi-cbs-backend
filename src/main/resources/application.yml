@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: yer-izi-cbs-backend
+  datasource:
+    url: jdbc:postgresql://localhost:5432/yer_izi_cbs
+    username: postgres
+    password: password
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.spatial.dialect.postgis.PostgisPGDialect
+        format_sql: true
+    show-sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
+    org.hibernate.type.descriptor.sql.BasicBinder: TRACE
